@@ -1,0 +1,364 @@
+2026-06-15 06:25:22 | INFO     | tools.crm_mock:86 — CRM match found for 'Infosys': Infosys [Prospect]
+2026-06-15 06:25:22 | INFO     | tools.crm_mock:89 — No CRM record found for 'Unknown Corp XYZ'
+2026-06-15 12:23:40 | INFO     | agents.pipeline:58 — LangGraph pipeline compiled: research_agent → analysis_agent → END
+2026-06-15 12:23:40 | INFO     | agents.pipeline:87 — Running pipeline for 'Zoho' in 'India'
+2026-06-15 12:23:40 | INFO     | agents.research_agent:76 — [ResearchAgent] Starting research for 'Zoho' in 'India'
+2026-06-15 12:23:40 | INFO     | tools.web_search:107 — Web search: 'Zoho India company overview business'
+2026-06-15 12:23:41 | WARNING  | tools.web_search:115 — Tavily failed: Unauthorized: missing or invalid API key.. Trying DuckDuckGo…
+2026-06-15 12:23:41 | WARNING  | tools.web_search:79 — DuckDuckGo fallback failed: No module named 'duckduckgo_search'
+2026-06-15 12:23:41 | INFO     | tools.web_search:107 — Web search: 'Zoho India products services customers'
+2026-06-15 12:23:41 | WARNING  | tools.web_search:115 — Tavily failed: Unauthorized: missing or invalid API key.. Trying DuckDuckGo…
+2026-06-15 12:23:41 | WARNING  | tools.web_search:79 — DuckDuckGo fallback failed: No module named 'duckduckgo_search'
+2026-06-15 12:23:47 | WARNING  | tools.news_search:89 — NewsAPI failed: RetryError[<Future at 0x13350f6f0 state=finished raised NewsAPIException>]
+2026-06-15 12:23:47 | INFO     | tools.news_search:92 — Falling back to Tavily news search
+2026-06-15 12:23:47 | WARNING  | tools.news_search:63 — Tavily news fallback failed: Unauthorized: missing or invalid API key.
+2026-06-15 12:23:48 | WARNING  | tools.wikipedia_search:77 — Wikipedia error for 'Zoho India': Expecting value: line 1 column 1 (char 0)
+2026-06-15 12:23:48 | WARNING  | tools.wikipedia_search:77 — Wikipedia error for 'Zoho': Expecting value: line 1 column 1 (char 0)
+2026-06-15 12:23:49 | WARNING  | tools.wikipedia_search:77 — Wikipedia error for 'Zoho company': Expecting value: line 1 column 1 (char 0)
+2026-06-15 12:23:49 | WARNING  | tools.wikipedia_search:81 — Wikipedia: no result found for 'Zoho' in 'India'
+2026-06-15 12:23:53 | INFO     | tools.financial_data:76 — yfinance: found data for ticker 'ZOH'
+2026-06-15 12:23:53 | DEBUG    | utils.cache:53 — Cached [financial] for 'Zoho'
+2026-06-15 12:23:53 | INFO     | tools.crm_mock:89 — No CRM record found for 'Zoho'
+2026-06-15 12:23:53 | INFO     | agents.research_agent:111 — [ResearchAgent] Collected 1 raw documents total
+2026-06-15 12:23:53 | INFO     | rag.chunker:56 — Chunking: 1 docs → 1 chunks (size=512, overlap=64)
+2026-06-15 12:23:53 | INFO     | rag.vector_store:24 — Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+2026-06-15 12:24:01 | INFO     | rag.vector_store:58 — Embedding 1 chunks…
+2026-06-15 12:24:02 | INFO     | rag.vector_store:72 — FAISS index built: 1 vectors, dim=384
+2026-06-15 12:24:02 | DEBUG    | rag.vector_store:102 — FAISS retrieved 1 chunks for query='Zoho company overview'
+2026-06-15 12:24:02 | DEBUG    | rag.vector_store:102 — FAISS retrieved 1 chunks for query='Zoho products services industry'
+2026-06-15 12:24:02 | DEBUG    | rag.vector_store:102 — FAISS retrieved 1 chunks for query='Zoho recent news developments 2024 2025'
+2026-06-15 12:24:02 | DEBUG    | rag.vector_store:102 — FAISS retrieved 1 chunks for query='Zoho financial performance revenue employees'
+2026-06-15 12:24:02 | DEBUG    | rag.vector_store:102 — FAISS retrieved 1 chunks for query='Zoho customers partnerships'
+2026-06-15 12:24:02 | INFO     | rag.reranker:22 — Loading cross-encoder: cross-encoder/ms-marco-MiniLM-L-6-v2
+2026-06-15 12:24:20 | INFO     | rag.reranker:49 — Cross-encoder reranking 1 candidates…
+2026-06-15 12:24:20 | INFO     | rag.reranker:72 — Reranking complete: top chunk score=5.1261 (source=yfinance)
+2026-06-15 12:24:20 | INFO     | agents.llm_client:21 — Initialising LLM: llama-3.3-70b-versatile
+2026-06-15 12:24:21 | INFO     | agents.research_agent:175 — [ResearchAgent] Summary generated (1106 chars)
+2026-06-15 12:24:21 | INFO     | agents.research_agent:199 — [ResearchAgent] Done. Confidence=low, sources=1
+2026-06-15 12:24:21 | INFO     | agents.analysis_agent:104 — [AnalysisAgent] Starting sales analysis for 'Zoho'
+2026-06-15 12:24:21 | INFO     | rag.chunker:56 — Chunking: 1 docs → 1 chunks (size=512, overlap=64)
+2026-06-15 12:24:21 | INFO     | rag.vector_store:58 — Embedding 1 chunks…
+2026-06-15 12:24:21 | INFO     | rag.vector_store:72 — FAISS index built: 1 vectors, dim=384
+2026-06-15 12:24:21 | DEBUG    | rag.vector_store:102 — FAISS retrieved 1 chunks for query='Zoho business challenges pain points'
+2026-06-15 12:24:21 | DEBUG    | rag.vector_store:102 — FAISS retrieved 1 chunks for query='Zoho technology stack digital transformation'
+2026-06-15 12:24:22 | DEBUG    | rag.vector_store:102 — FAISS retrieved 1 chunks for query='Zoho growth expansion investment'
+2026-06-15 12:24:22 | DEBUG    | rag.vector_store:102 — FAISS retrieved 1 chunks for query='Zoho competitors market challenges'
+2026-06-15 12:24:22 | DEBUG    | rag.vector_store:102 — FAISS retrieved 1 chunks for query='Zoho hiring layoffs restructuring'
+2026-06-15 12:24:22 | INFO     | rag.reranker:49 — Cross-encoder reranking 1 candidates…
+2026-06-15 12:24:22 | INFO     | rag.reranker:72 — Reranking complete: top chunk score=-4.8708 (source=yfinance)
+2026-06-15 12:24:23 | INFO     | agents.analysis_agent:180 — [AnalysisAgent] Structured output parsed successfully
+2026-06-15 12:24:23 | INFO     | agents.analysis_agent:228 — [AnalysisAgent] Report assembled for 'Zoho'
+2026-06-15 12:24:23 | INFO     | agents.pipeline:91 — Pipeline completed for 'Zoho'
+2026-06-15 12:24:23 | INFO     | exports.pdf_exporter:207 — PDF exported: exports/sales_report_Zoho_20260615_122423.pdf
+2026-06-15 12:36:58 | INFO     | agents.pipeline:58 — LangGraph pipeline compiled: research_agent → analysis_agent → END
+2026-06-15 12:36:58 | INFO     | agents.pipeline:87 — Running pipeline for 'Apple' in 'India'
+2026-06-15 12:36:58 | INFO     | agents.research_agent:76 — [ResearchAgent] Starting research for 'Apple' in 'India'
+2026-06-15 12:36:58 | INFO     | tools.web_search:107 — Web search: 'Apple India company overview business'
+2026-06-15 12:37:00 | INFO     | tools.web_search:113 — Tavily returned 5 results
+2026-06-15 12:37:00 | DEBUG    | utils.cache:53 — Cached [web_company overview business] for 'Apple'
+2026-06-15 12:37:00 | INFO     | tools.web_search:107 — Web search: 'Apple India products services customers'
+2026-06-15 12:37:03 | INFO     | tools.web_search:113 — Tavily returned 5 results
+2026-06-15 12:37:03 | DEBUG    | utils.cache:53 — Cached [web_products services customers] for 'Apple'
+2026-06-15 12:37:03 | INFO     | tools.news_search:87 — NewsAPI returned 10 articles
+2026-06-15 12:37:03 | DEBUG    | utils.cache:53 — Cached [news] for 'Apple'
+2026-06-15 12:37:05 | INFO     | tools.wikipedia_search:51 — Wikipedia: found 'Apple Inc.' using query 'Apple India'
+2026-06-15 12:37:05 | DEBUG    | utils.cache:53 — Cached [wikipedia] for 'Apple'
+2026-06-15 12:37:07 | INFO     | tools.financial_data:76 — yfinance: found data for ticker 'APPL'
+2026-06-15 12:37:07 | DEBUG    | utils.cache:53 — Cached [financial] for 'Apple'
+2026-06-15 12:37:07 | INFO     | tools.crm_mock:89 — No CRM record found for 'Apple'
+2026-06-15 12:37:07 | INFO     | agents.research_agent:111 — [ResearchAgent] Collected 22 raw documents total
+2026-06-15 12:37:07 | INFO     | rag.chunker:56 — Chunking: 22 docs → 75 chunks (size=512, overlap=64)
+2026-06-15 12:37:07 | INFO     | rag.vector_store:24 — Loading embedding model: sentence-transformers/all-MiniLM-L6-v2
+2026-06-15 12:37:13 | INFO     | rag.vector_store:58 — Embedding 75 chunks…
+2026-06-15 12:37:15 | INFO     | rag.vector_store:72 — FAISS index built: 75 vectors, dim=384
+2026-06-15 12:37:15 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Apple company overview'
+2026-06-15 12:37:16 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Apple products services industry'
+2026-06-15 12:37:16 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Apple recent news developments 2024 2025'
+2026-06-15 12:37:16 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Apple financial performance revenue employees'
+2026-06-15 12:37:16 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Apple customers partnerships'
+2026-06-15 12:37:16 | INFO     | rag.reranker:22 — Loading cross-encoder: cross-encoder/ms-marco-MiniLM-L-6-v2
+2026-06-15 12:37:24 | INFO     | rag.reranker:49 — Cross-encoder reranking 13 candidates…
+2026-06-15 12:37:25 | INFO     | rag.reranker:72 — Reranking complete: top chunk score=4.2275 (source=web)
+2026-06-15 12:37:25 | INFO     | agents.llm_client:21 — Initialising LLM: llama-3.3-70b-versatile
+2026-06-15 12:37:27 | INFO     | agents.research_agent:175 — [ResearchAgent] Summary generated (3108 chars)
+2026-06-15 12:37:27 | INFO     | agents.research_agent:199 — [ResearchAgent] Done. Confidence=high, sources=3
+2026-06-15 12:37:27 | INFO     | agents.analysis_agent:104 — [AnalysisAgent] Starting sales analysis for 'Apple'
+2026-06-15 12:37:27 | INFO     | rag.chunker:56 — Chunking: 22 docs → 75 chunks (size=512, overlap=64)
+2026-06-15 12:37:27 | INFO     | rag.vector_store:58 — Embedding 75 chunks…
+2026-06-15 12:37:27 | INFO     | rag.vector_store:72 — FAISS index built: 75 vectors, dim=384
+2026-06-15 12:37:27 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Apple business challenges pain points'
+2026-06-15 12:37:27 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Apple technology stack digital transformation'
+2026-06-15 12:37:27 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Apple growth expansion investment'
+2026-06-15 12:37:27 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Apple competitors market challenges'
+2026-06-15 12:37:27 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Apple hiring layoffs restructuring'
+2026-06-15 12:37:27 | INFO     | rag.reranker:49 — Cross-encoder reranking 12 candidates…
+2026-06-15 12:37:28 | INFO     | rag.reranker:72 — Reranking complete: top chunk score=-2.2388 (source=wikipedia)
+2026-06-15 12:37:30 | INFO     | agents.analysis_agent:180 — [AnalysisAgent] Structured output parsed successfully
+2026-06-15 12:37:30 | INFO     | agents.analysis_agent:228 — [AnalysisAgent] Report assembled for 'Apple'
+2026-06-15 12:37:30 | INFO     | agents.pipeline:91 — Pipeline completed for 'Apple'
+2026-06-15 12:37:30 | INFO     | exports.pdf_exporter:207 — PDF exported: exports/sales_report_Apple_20260615_123730.pdf
+2026-06-15 12:39:56 | INFO     | agents.pipeline:58 — LangGraph pipeline compiled: research_agent → analysis_agent → END
+2026-06-15 12:39:56 | INFO     | agents.pipeline:87 — Running pipeline for 'Infosys' in 'India'
+2026-06-15 12:39:56 | INFO     | agents.research_agent:76 — [ResearchAgent] Starting research for 'Infosys' in 'India'
+2026-06-15 12:39:56 | INFO     | tools.web_search:107 — Web search: 'Infosys India company overview business'
+2026-06-15 12:39:58 | INFO     | tools.web_search:113 — Tavily returned 5 results
+2026-06-15 12:39:58 | DEBUG    | utils.cache:53 — Cached [web_company overview business] for 'Infosys'
+2026-06-15 12:39:58 | INFO     | tools.web_search:107 — Web search: 'Infosys India products services customers'
+2026-06-15 12:40:01 | INFO     | tools.web_search:113 — Tavily returned 5 results
+2026-06-15 12:40:01 | DEBUG    | utils.cache:53 — Cached [web_products services customers] for 'Infosys'
+2026-06-15 12:40:01 | INFO     | tools.news_search:87 — NewsAPI returned 10 articles
+2026-06-15 12:40:01 | DEBUG    | utils.cache:53 — Cached [news] for 'Infosys'
+2026-06-15 12:40:03 | INFO     | tools.wikipedia_search:51 — Wikipedia: found 'Infosys' using query 'Infosys India'
+2026-06-15 12:40:03 | DEBUG    | utils.cache:53 — Cached [wikipedia] for 'Infosys'
+2026-06-15 12:40:05 | INFO     | tools.financial_data:76 — yfinance: found data for ticker 'INF'
+2026-06-15 12:40:05 | DEBUG    | utils.cache:53 — Cached [financial] for 'Infosys'
+2026-06-15 12:40:05 | INFO     | tools.crm_mock:86 — CRM match found for 'Infosys': Infosys [Prospect]
+2026-06-15 12:40:05 | INFO     | agents.research_agent:111 — [ResearchAgent] Collected 23 raw documents total
+2026-06-15 12:40:05 | INFO     | rag.chunker:56 — Chunking: 23 docs → 78 chunks (size=512, overlap=64)
+2026-06-15 12:40:05 | INFO     | rag.vector_store:58 — Embedding 78 chunks…
+2026-06-15 12:40:06 | INFO     | rag.vector_store:72 — FAISS index built: 78 vectors, dim=384
+2026-06-15 12:40:06 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Infosys company overview'
+2026-06-15 12:40:06 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Infosys products services industry'
+2026-06-15 12:40:06 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Infosys recent news developments 2024 2025'
+2026-06-15 12:40:06 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Infosys financial performance revenue employees'
+2026-06-15 12:40:06 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Infosys customers partnerships'
+2026-06-15 12:40:06 | INFO     | rag.reranker:49 — Cross-encoder reranking 12 candidates…
+2026-06-15 12:40:06 | INFO     | rag.reranker:72 — Reranking complete: top chunk score=8.4522 (source=wikipedia)
+2026-06-15 12:40:08 | INFO     | agents.research_agent:175 — [ResearchAgent] Summary generated (2721 chars)
+2026-06-15 12:40:08 | INFO     | agents.research_agent:199 — [ResearchAgent] Done. Confidence=high, sources=3
+2026-06-15 12:40:08 | INFO     | agents.analysis_agent:104 — [AnalysisAgent] Starting sales analysis for 'Infosys'
+2026-06-15 12:40:08 | INFO     | rag.chunker:56 — Chunking: 23 docs → 78 chunks (size=512, overlap=64)
+2026-06-15 12:40:08 | INFO     | rag.vector_store:58 — Embedding 78 chunks…
+2026-06-15 12:40:08 | INFO     | rag.vector_store:72 — FAISS index built: 78 vectors, dim=384
+2026-06-15 12:40:08 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Infosys business challenges pain points'
+2026-06-15 12:40:08 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Infosys technology stack digital transformation'
+2026-06-15 12:40:08 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Infosys growth expansion investment'
+2026-06-15 12:40:08 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Infosys competitors market challenges'
+2026-06-15 12:40:08 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Infosys hiring layoffs restructuring'
+2026-06-15 12:40:08 | INFO     | rag.reranker:49 — Cross-encoder reranking 10 candidates…
+2026-06-15 12:40:09 | INFO     | rag.reranker:72 — Reranking complete: top chunk score=-0.3648 (source=wikipedia)
+2026-06-15 12:40:11 | INFO     | agents.analysis_agent:180 — [AnalysisAgent] Structured output parsed successfully
+2026-06-15 12:40:11 | INFO     | agents.analysis_agent:228 — [AnalysisAgent] Report assembled for 'Infosys'
+2026-06-15 12:40:11 | INFO     | agents.pipeline:91 — Pipeline completed for 'Infosys'
+2026-06-15 12:40:11 | INFO     | exports.pdf_exporter:207 — PDF exported: exports/sales_report_Infosys_20260615_124011.pdf
+2026-06-15 12:40:11 | INFO     | exports.docx_exporter:169 — DOCX exported: exports/sales_report_Infosys_20260615_124011.docx
+2026-06-15 13:16:37 | INFO     | utils.cache:64 — Cleared 11 cache files
+2026-06-15 13:16:41 | INFO     | agents.pipeline:58 — LangGraph pipeline compiled: research_agent → analysis_agent → END
+2026-06-15 13:16:41 | INFO     | agents.pipeline:87 — Running pipeline for 'Apple' in 'United States'
+2026-06-15 13:16:41 | INFO     | agents.research_agent:76 — [ResearchAgent] Starting research for 'Apple' in 'United States'
+2026-06-15 13:16:41 | INFO     | tools.web_search:107 — Web search: 'Apple United States company overview business'
+2026-06-15 13:16:43 | INFO     | tools.web_search:113 — Tavily returned 5 results
+2026-06-15 13:16:43 | DEBUG    | utils.cache:53 — Cached [web_company overview business] for 'Apple'
+2026-06-15 13:16:43 | INFO     | tools.web_search:107 — Web search: 'Apple United States products services customers'
+2026-06-15 13:16:45 | INFO     | tools.web_search:113 — Tavily returned 5 results
+2026-06-15 13:16:45 | DEBUG    | utils.cache:53 — Cached [web_products services customers] for 'Apple'
+2026-06-15 13:16:46 | INFO     | tools.news_search:87 — NewsAPI returned 10 articles
+2026-06-15 13:16:46 | DEBUG    | utils.cache:53 — Cached [news] for 'Apple'
+2026-06-15 13:16:47 | WARNING  | tools.wikipedia_search:77 — Wikipedia error for 'Apple United States': Expecting value: line 1 column 1 (char 0)
+2026-06-15 13:16:47 | WARNING  | tools.wikipedia_search:77 — Wikipedia error for 'Apple': Expecting value: line 1 column 1 (char 0)
+2026-06-15 13:16:48 | WARNING  | tools.wikipedia_search:77 — Wikipedia error for 'Apple company': Expecting value: line 1 column 1 (char 0)
+2026-06-15 13:16:48 | WARNING  | tools.wikipedia_search:81 — Wikipedia: no result found for 'Apple' in 'United States'
+2026-06-15 13:16:49 | INFO     | tools.financial_data:76 — yfinance: found data for ticker 'APPL'
+2026-06-15 13:16:49 | DEBUG    | utils.cache:53 — Cached [financial] for 'Apple'
+2026-06-15 13:16:49 | INFO     | tools.crm_mock:89 — No CRM record found for 'Apple'
+2026-06-15 13:16:49 | INFO     | agents.research_agent:111 — [ResearchAgent] Collected 21 raw documents total
+2026-06-15 13:16:49 | INFO     | rag.chunker:56 — Chunking: 21 docs → 65 chunks (size=512, overlap=64)
+2026-06-15 13:16:49 | INFO     | rag.vector_store:58 — Embedding 65 chunks…
+2026-06-15 13:16:50 | INFO     | rag.vector_store:72 — FAISS index built: 65 vectors, dim=384
+2026-06-15 13:16:50 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Apple company overview'
+2026-06-15 13:16:50 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Apple products services industry'
+2026-06-15 13:16:50 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Apple recent news developments 2024 2025'
+2026-06-15 13:16:50 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Apple financial performance revenue employees'
+2026-06-15 13:16:50 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Apple customers partnerships'
+2026-06-15 13:16:50 | INFO     | rag.reranker:49 — Cross-encoder reranking 18 candidates…
+2026-06-15 13:16:50 | INFO     | rag.reranker:72 — Reranking complete: top chunk score=4.0124 (source=web)
+2026-06-15 13:16:53 | INFO     | agents.research_agent:175 — [ResearchAgent] Summary generated (2762 chars)
+2026-06-15 13:16:53 | INFO     | agents.research_agent:199 — [ResearchAgent] Done. Confidence=medium, sources=2
+2026-06-15 13:16:53 | INFO     | agents.analysis_agent:104 — [AnalysisAgent] Starting sales analysis for 'Apple'
+2026-06-15 13:16:53 | INFO     | rag.chunker:56 — Chunking: 21 docs → 65 chunks (size=512, overlap=64)
+2026-06-15 13:16:53 | INFO     | rag.vector_store:58 — Embedding 65 chunks…
+2026-06-15 13:16:53 | INFO     | rag.vector_store:72 — FAISS index built: 65 vectors, dim=384
+2026-06-15 13:16:53 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Apple business challenges pain points'
+2026-06-15 13:16:53 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Apple technology stack digital transformation'
+2026-06-15 13:16:53 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Apple growth expansion investment'
+2026-06-15 13:16:53 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Apple competitors market challenges'
+2026-06-15 13:16:53 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Apple hiring layoffs restructuring'
+2026-06-15 13:16:53 | INFO     | rag.reranker:49 — Cross-encoder reranking 16 candidates…
+2026-06-15 13:16:53 | INFO     | rag.reranker:72 — Reranking complete: top chunk score=-2.2347 (source=web)
+2026-06-15 13:16:56 | INFO     | agents.analysis_agent:180 — [AnalysisAgent] Structured output parsed successfully
+2026-06-15 13:16:56 | INFO     | agents.analysis_agent:228 — [AnalysisAgent] Report assembled for 'Apple'
+2026-06-15 13:16:56 | INFO     | agents.pipeline:91 — Pipeline completed for 'Apple'
+2026-06-15 13:16:56 | INFO     | exports.pdf_exporter:207 — PDF exported: exports/sales_report_Apple_20260615_131656.pdf
+2026-06-15 13:18:14 | INFO     | agents.pipeline:58 — LangGraph pipeline compiled: research_agent → analysis_agent → END
+2026-06-15 13:18:14 | INFO     | agents.pipeline:87 — Running pipeline for 'TVS SCS' in 'India'
+2026-06-15 13:18:14 | INFO     | agents.research_agent:76 — [ResearchAgent] Starting research for 'TVS SCS' in 'India'
+2026-06-15 13:18:14 | INFO     | tools.web_search:107 — Web search: 'TVS SCS India company overview business'
+2026-06-15 13:18:18 | INFO     | tools.web_search:113 — Tavily returned 5 results
+2026-06-15 13:18:18 | DEBUG    | utils.cache:53 — Cached [web_company overview business] for 'TVS SCS'
+2026-06-15 13:18:18 | INFO     | tools.web_search:107 — Web search: 'TVS SCS India products services customers'
+2026-06-15 13:18:20 | INFO     | tools.web_search:113 — Tavily returned 5 results
+2026-06-15 13:18:20 | DEBUG    | utils.cache:53 — Cached [web_products services customers] for 'TVS SCS'
+2026-06-15 13:18:21 | INFO     | tools.news_search:87 — NewsAPI returned 7 articles
+2026-06-15 13:18:21 | DEBUG    | utils.cache:53 — Cached [news] for 'TVS SCS'
+2026-06-15 13:18:22 | INFO     | tools.wikipedia_search:51 — Wikipedia: found 'TVS Supply Chain Solutions' using query 'TVS SCS India'
+2026-06-15 13:18:22 | DEBUG    | utils.cache:53 — Cached [wikipedia] for 'TVS SCS'
+2026-06-15 13:18:24 | INFO     | tools.financial_data:76 — yfinance: found data for ticker 'TVS'
+2026-06-15 13:18:24 | DEBUG    | utils.cache:53 — Cached [financial] for 'TVS SCS'
+2026-06-15 13:18:24 | INFO     | tools.crm_mock:89 — No CRM record found for 'TVS SCS'
+2026-06-15 13:18:24 | INFO     | agents.research_agent:111 — [ResearchAgent] Collected 19 raw documents total
+2026-06-15 13:18:24 | INFO     | rag.chunker:56 — Chunking: 19 docs → 67 chunks (size=512, overlap=64)
+2026-06-15 13:18:24 | INFO     | rag.vector_store:58 — Embedding 67 chunks…
+2026-06-15 13:18:26 | INFO     | rag.vector_store:72 — FAISS index built: 67 vectors, dim=384
+2026-06-15 13:18:26 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='TVS SCS company overview'
+2026-06-15 13:18:26 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='TVS SCS products services industry'
+2026-06-15 13:18:27 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='TVS SCS recent news developments 2024 2025'
+2026-06-15 13:18:27 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='TVS SCS financial performance revenue employees'
+2026-06-15 13:18:27 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='TVS SCS customers partnerships'
+2026-06-15 13:18:27 | INFO     | rag.reranker:49 — Cross-encoder reranking 12 candidates…
+2026-06-15 13:18:27 | INFO     | rag.reranker:72 — Reranking complete: top chunk score=7.8484 (source=wikipedia)
+2026-06-15 13:18:29 | INFO     | agents.research_agent:175 — [ResearchAgent] Summary generated (3082 chars)
+2026-06-15 13:18:29 | INFO     | agents.research_agent:199 — [ResearchAgent] Done. Confidence=high, sources=4
+2026-06-15 13:18:29 | INFO     | agents.analysis_agent:104 — [AnalysisAgent] Starting sales analysis for 'TVS SCS'
+2026-06-15 13:18:29 | INFO     | rag.chunker:56 — Chunking: 19 docs → 67 chunks (size=512, overlap=64)
+2026-06-15 13:18:29 | INFO     | rag.vector_store:58 — Embedding 67 chunks…
+2026-06-15 13:18:30 | INFO     | rag.vector_store:72 — FAISS index built: 67 vectors, dim=384
+2026-06-15 13:18:30 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='TVS SCS business challenges pain points'
+2026-06-15 13:18:30 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='TVS SCS technology stack digital transformation'
+2026-06-15 13:18:30 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='TVS SCS growth expansion investment'
+2026-06-15 13:18:30 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='TVS SCS competitors market challenges'
+2026-06-15 13:18:30 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='TVS SCS hiring layoffs restructuring'
+2026-06-15 13:18:30 | INFO     | rag.reranker:49 — Cross-encoder reranking 9 candidates…
+2026-06-15 13:18:30 | INFO     | rag.reranker:72 — Reranking complete: top chunk score=3.6477 (source=web)
+2026-06-15 13:18:34 | INFO     | agents.analysis_agent:180 — [AnalysisAgent] Structured output parsed successfully
+2026-06-15 13:18:34 | INFO     | agents.analysis_agent:228 — [AnalysisAgent] Report assembled for 'TVS SCS'
+2026-06-15 13:18:34 | INFO     | agents.pipeline:91 — Pipeline completed for 'TVS SCS'
+2026-06-15 13:18:34 | INFO     | exports.pdf_exporter:207 — PDF exported: exports/sales_report_TVS_SCS_20260615_131834.pdf
+2026-06-15 13:26:56 | INFO     | agents.pipeline:58 — LangGraph pipeline compiled: research_agent → analysis_agent → END
+2026-06-15 13:26:56 | INFO     | agents.pipeline:87 — Running pipeline for 'TCS' in 'India'
+2026-06-15 13:26:56 | INFO     | agents.research_agent:76 — [ResearchAgent] Starting research for 'TCS' in 'India'
+2026-06-15 13:26:56 | INFO     | tools.web_search:107 — Web search: 'TCS India company overview business'
+2026-06-15 13:26:58 | INFO     | tools.web_search:113 — Tavily returned 5 results
+2026-06-15 13:26:58 | DEBUG    | utils.cache:53 — Cached [web_company overview business] for 'TCS'
+2026-06-15 13:26:58 | INFO     | tools.web_search:107 — Web search: 'TCS India products services customers'
+2026-06-15 13:27:00 | INFO     | tools.web_search:113 — Tavily returned 5 results
+2026-06-15 13:27:00 | DEBUG    | utils.cache:53 — Cached [web_products services customers] for 'TCS'
+2026-06-15 13:27:01 | INFO     | tools.news_search:87 — NewsAPI returned 10 articles
+2026-06-15 13:27:01 | DEBUG    | utils.cache:53 — Cached [news] for 'TCS'
+2026-06-15 13:27:02 | DEBUG    | tools.wikipedia_search:74 — Wikipedia: no page for 'TCS India'
+2026-06-15 13:27:06 | DEBUG    | tools.wikipedia_search:74 — Wikipedia: no page for 'TCS company'
+2026-06-15 13:27:06 | WARNING  | tools.wikipedia_search:81 — Wikipedia: no result found for 'TCS' in 'India'
+2026-06-15 13:27:06 | INFO     | tools.financial_data:76 — yfinance: found data for ticker 'TCS'
+2026-06-15 13:27:06 | DEBUG    | utils.cache:53 — Cached [financial] for 'TCS'
+2026-06-15 13:27:06 | INFO     | tools.crm_mock:89 — No CRM record found for 'TCS'
+2026-06-15 13:27:06 | INFO     | agents.research_agent:111 — [ResearchAgent] Collected 21 raw documents total
+2026-06-15 13:27:06 | INFO     | rag.chunker:56 — Chunking: 21 docs → 67 chunks (size=512, overlap=64)
+2026-06-15 13:27:06 | INFO     | rag.vector_store:58 — Embedding 67 chunks…
+2026-06-15 13:27:07 | INFO     | rag.vector_store:72 — FAISS index built: 67 vectors, dim=384
+2026-06-15 13:27:07 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='TCS company overview'
+2026-06-15 13:27:07 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='TCS products services industry'
+2026-06-15 13:27:07 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='TCS recent news developments 2024 2025'
+2026-06-15 13:27:07 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='TCS financial performance revenue employees'
+2026-06-15 13:27:07 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='TCS customers partnerships'
+2026-06-15 13:27:07 | INFO     | rag.reranker:49 — Cross-encoder reranking 15 candidates…
+2026-06-15 13:27:08 | INFO     | rag.reranker:72 — Reranking complete: top chunk score=6.6884 (source=web)
+2026-06-15 13:27:09 | INFO     | agents.research_agent:175 — [ResearchAgent] Summary generated (2865 chars)
+2026-06-15 13:27:09 | INFO     | agents.research_agent:199 — [ResearchAgent] Done. Confidence=medium, sources=2
+2026-06-15 13:27:09 | INFO     | agents.analysis_agent:104 — [AnalysisAgent] Starting sales analysis for 'TCS'
+2026-06-15 13:27:09 | INFO     | rag.chunker:56 — Chunking: 21 docs → 67 chunks (size=512, overlap=64)
+2026-06-15 13:27:09 | INFO     | rag.vector_store:58 — Embedding 67 chunks…
+2026-06-15 13:27:10 | INFO     | rag.vector_store:72 — FAISS index built: 67 vectors, dim=384
+2026-06-15 13:27:10 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='TCS business challenges pain points'
+2026-06-15 13:27:10 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='TCS technology stack digital transformation'
+2026-06-15 13:27:10 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='TCS growth expansion investment'
+2026-06-15 13:27:10 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='TCS competitors market challenges'
+2026-06-15 13:27:10 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='TCS hiring layoffs restructuring'
+2026-06-15 13:27:10 | INFO     | rag.reranker:49 — Cross-encoder reranking 9 candidates…
+2026-06-15 13:27:10 | INFO     | rag.reranker:72 — Reranking complete: top chunk score=-1.6737 (source=web)
+2026-06-15 13:27:13 | INFO     | agents.analysis_agent:180 — [AnalysisAgent] Structured output parsed successfully
+2026-06-15 13:27:13 | INFO     | agents.analysis_agent:228 — [AnalysisAgent] Report assembled for 'TCS'
+2026-06-15 13:27:13 | INFO     | agents.pipeline:91 — Pipeline completed for 'TCS'
+2026-06-15 13:27:14 | INFO     | exports.pdf_exporter:207 — PDF exported: exports/sales_report_TCS_20260615_132714.pdf
+2026-06-15 13:56:30 | INFO     | agents.pipeline:58 — LangGraph pipeline compiled: research_agent → analysis_agent → END
+2026-06-15 13:56:30 | INFO     | agents.pipeline:87 — Running pipeline for 'TCS' in 'India'
+2026-06-15 13:56:30 | INFO     | agents.research_agent:76 — [ResearchAgent] Starting research for 'TCS' in 'India'
+2026-06-15 13:56:30 | INFO     | utils.cache:40 — Cache hit [web_company overview business] for 'TCS' (0.5h old)
+2026-06-15 13:56:30 | INFO     | utils.cache:40 — Cache hit [web_products services customers] for 'TCS' (0.5h old)
+2026-06-15 13:56:30 | INFO     | utils.cache:40 — Cache hit [news] for 'TCS' (0.5h old)
+2026-06-15 13:56:31 | DEBUG    | tools.wikipedia_search:74 — Wikipedia: no page for 'TCS India'
+2026-06-15 13:56:33 | WARNING  | tools.wikipedia_search:77 — Wikipedia error for 'TCS': Expecting value: line 1 column 1 (char 0)
+2026-06-15 13:56:34 | WARNING  | tools.wikipedia_search:77 — Wikipedia error for 'TCS company': Expecting value: line 1 column 1 (char 0)
+2026-06-15 13:56:34 | WARNING  | tools.wikipedia_search:81 — Wikipedia: no result found for 'TCS' in 'India'
+2026-06-15 13:56:34 | INFO     | utils.cache:40 — Cache hit [financial] for 'TCS' (0.5h old)
+2026-06-15 13:56:34 | INFO     | tools.crm_mock:89 — No CRM record found for 'TCS'
+2026-06-15 13:56:34 | INFO     | agents.research_agent:111 — [ResearchAgent] Collected 21 raw documents total
+2026-06-15 13:56:34 | INFO     | rag.chunker:56 — Chunking: 21 docs → 67 chunks (size=512, overlap=64)
+2026-06-15 13:56:34 | INFO     | rag.vector_store:58 — Embedding 67 chunks…
+2026-06-15 13:56:35 | INFO     | rag.vector_store:72 — FAISS index built: 67 vectors, dim=384
+2026-06-15 13:56:35 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='TCS company overview'
+2026-06-15 13:56:35 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='TCS products services industry'
+2026-06-15 13:56:35 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='TCS recent news developments 2024 2025'
+2026-06-15 13:56:35 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='TCS financial performance revenue employees'
+2026-06-15 13:56:35 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='TCS customers partnerships'
+2026-06-15 13:56:35 | INFO     | rag.reranker:49 — Cross-encoder reranking 15 candidates…
+2026-06-15 13:56:35 | INFO     | rag.reranker:72 — Reranking complete: top chunk score=6.6884 (source=web)
+2026-06-15 13:56:37 | INFO     | agents.research_agent:175 — [ResearchAgent] Summary generated (2800 chars)
+2026-06-15 13:56:37 | INFO     | agents.research_agent:199 — [ResearchAgent] Done. Confidence=medium, sources=2
+2026-06-15 13:56:37 | INFO     | agents.analysis_agent:104 — [AnalysisAgent] Starting sales analysis for 'TCS'
+2026-06-15 13:56:37 | INFO     | rag.chunker:56 — Chunking: 21 docs → 67 chunks (size=512, overlap=64)
+2026-06-15 13:56:37 | INFO     | rag.vector_store:58 — Embedding 67 chunks…
+2026-06-15 13:56:37 | INFO     | rag.vector_store:72 — FAISS index built: 67 vectors, dim=384
+2026-06-15 13:56:37 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='TCS business challenges pain points'
+2026-06-15 13:56:37 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='TCS technology stack digital transformation'
+2026-06-15 13:56:37 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='TCS growth expansion investment'
+2026-06-15 13:56:37 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='TCS competitors market challenges'
+2026-06-15 13:56:37 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='TCS hiring layoffs restructuring'
+2026-06-15 13:56:37 | INFO     | rag.reranker:49 — Cross-encoder reranking 9 candidates…
+2026-06-15 13:56:37 | INFO     | rag.reranker:72 — Reranking complete: top chunk score=-1.6737 (source=web)
+2026-06-15 13:56:40 | INFO     | agents.analysis_agent:180 — [AnalysisAgent] Structured output parsed successfully
+2026-06-15 13:56:40 | INFO     | agents.analysis_agent:228 — [AnalysisAgent] Report assembled for 'TCS'
+2026-06-15 13:56:40 | INFO     | agents.pipeline:91 — Pipeline completed for 'TCS'
+2026-06-15 13:56:40 | INFO     | exports.pdf_exporter:207 — PDF exported: exports/sales_report_TCS_20260615_135640.pdf
+2026-06-15 13:57:22 | INFO     | agents.pipeline:58 — LangGraph pipeline compiled: research_agent → analysis_agent → END
+2026-06-15 13:57:22 | INFO     | agents.pipeline:87 — Running pipeline for 'Zoho' in 'India'
+2026-06-15 13:57:22 | INFO     | agents.research_agent:76 — [ResearchAgent] Starting research for 'Zoho' in 'India'
+2026-06-15 13:57:22 | INFO     | tools.web_search:107 — Web search: 'Zoho India company overview business'
+2026-06-15 13:57:24 | INFO     | tools.web_search:113 — Tavily returned 5 results
+2026-06-15 13:57:24 | DEBUG    | utils.cache:53 — Cached [web_company overview business] for 'Zoho'
+2026-06-15 13:57:24 | INFO     | tools.web_search:107 — Web search: 'Zoho India products services customers'
+2026-06-15 13:57:26 | INFO     | tools.web_search:113 — Tavily returned 5 results
+2026-06-15 13:57:26 | DEBUG    | utils.cache:53 — Cached [web_products services customers] for 'Zoho'
+2026-06-15 13:57:27 | INFO     | tools.news_search:87 — NewsAPI returned 10 articles
+2026-06-15 13:57:27 | DEBUG    | utils.cache:53 — Cached [news] for 'Zoho'
+2026-06-15 13:57:29 | INFO     | tools.wikipedia_search:51 — Wikipedia: found 'Zoho Corporation' using query 'Zoho India'
+2026-06-15 13:57:29 | DEBUG    | utils.cache:53 — Cached [wikipedia] for 'Zoho'
+2026-06-15 13:57:31 | INFO     | tools.financial_data:76 — yfinance: found data for ticker 'ZOH'
+2026-06-15 13:57:31 | DEBUG    | utils.cache:53 — Cached [financial] for 'Zoho'
+2026-06-15 13:57:31 | INFO     | tools.crm_mock:89 — No CRM record found for 'Zoho'
+2026-06-15 13:57:31 | INFO     | agents.research_agent:111 — [ResearchAgent] Collected 22 raw documents total
+2026-06-15 13:57:31 | INFO     | rag.chunker:56 — Chunking: 22 docs → 80 chunks (size=512, overlap=64)
+2026-06-15 13:57:31 | INFO     | rag.vector_store:58 — Embedding 80 chunks…
+2026-06-15 13:57:33 | INFO     | rag.vector_store:72 — FAISS index built: 80 vectors, dim=384
+2026-06-15 13:57:33 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Zoho company overview'
+2026-06-15 13:57:33 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Zoho products services industry'
+2026-06-15 13:57:33 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Zoho recent news developments 2024 2025'
+2026-06-15 13:57:33 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Zoho financial performance revenue employees'
+2026-06-15 13:57:33 | DEBUG    | rag.vector_store:102 — FAISS retrieved 6 chunks for query='Zoho customers partnerships'
+2026-06-15 13:57:33 | INFO     | rag.reranker:49 — Cross-encoder reranking 11 candidates…
+2026-06-15 13:57:33 | INFO     | rag.reranker:72 — Reranking complete: top chunk score=8.3324 (source=wikipedia)
+2026-06-15 13:57:35 | INFO     | agents.research_agent:175 — [ResearchAgent] Summary generated (3036 chars)
+2026-06-15 13:57:35 | INFO     | agents.research_agent:199 — [ResearchAgent] Done. Confidence=high, sources=3
+2026-06-15 13:57:35 | INFO     | agents.analysis_agent:104 — [AnalysisAgent] Starting sales analysis for 'Zoho'
+2026-06-15 13:57:35 | INFO     | rag.chunker:56 — Chunking: 22 docs → 80 chunks (size=512, overlap=64)
+2026-06-15 13:57:35 | INFO     | rag.vector_store:58 — Embedding 80 chunks…
+2026-06-15 13:57:36 | INFO     | rag.vector_store:72 — FAISS index built: 80 vectors, dim=384
+2026-06-15 13:57:36 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Zoho business challenges pain points'
+2026-06-15 13:57:36 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Zoho technology stack digital transformation'
+2026-06-15 13:57:36 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Zoho growth expansion investment'
+2026-06-15 13:57:36 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Zoho competitors market challenges'
+2026-06-15 13:57:36 | DEBUG    | rag.vector_store:102 — FAISS retrieved 5 chunks for query='Zoho hiring layoffs restructuring'
+2026-06-15 13:57:36 | INFO     | rag.reranker:49 — Cross-encoder reranking 8 candidates…
+2026-06-15 13:57:36 | INFO     | rag.reranker:72 — Reranking complete: top chunk score=2.4527 (source=web)
+2026-06-15 13:57:38 | INFO     | agents.analysis_agent:180 — [AnalysisAgent] Structured output parsed successfully
+2026-06-15 13:57:38 | INFO     | agents.analysis_agent:228 — [AnalysisAgent] Report assembled for 'Zoho'
+2026-06-15 13:57:38 | INFO     | agents.pipeline:91 — Pipeline completed for 'Zoho'
+2026-06-15 13:57:39 | INFO     | exports.pdf_exporter:207 — PDF exported: exports/sales_report_Zoho_20260615_135739.pdf
