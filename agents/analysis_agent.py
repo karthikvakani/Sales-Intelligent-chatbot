@@ -67,7 +67,7 @@ IMPORTANT RULES
 
 Return ONLY valid JSON:
 
-{
+{{
   "executive_summary": [
     "bullet point",
     "bullet point"
@@ -78,39 +78,39 @@ Return ONLY valid JSON:
   "industry_information": "",
 
   "recent_news_events": [
-    {
+    {{
       "event": "",
       "business_impact": "",
       "source": ""
-    }
+    }}
   ],
 
   "business_opportunities": [
-    {
+    {{
       "opportunity": "",
       "business_need": "",
       "evidence": "",
       "source": "",
       "confidence": "high|medium|low",
       "sales_play": ""
-    }
+    }}
   ],
 
   "pain_points": [
-    {
+    {{
       "pain_point": "",
       "evidence": "",
       "source": ""
-    }
+    }}
   ],
 
-  "suggested_sales_approach": {
+  "suggested_sales_approach": {{
     "strategy": "",
     "opening_message": "",
     "talking_points": [],
     "avoid": [],
     "recommended_timing": ""
-  },
+  }},
 
   "key_contacts": "",
 
@@ -119,7 +119,7 @@ Return ONLY valid JSON:
   "confidence_level": "high|medium|low",
 
   "data_gaps": []
-}
+}}
 """
 
 def _extract_crm_context(state: AgentState) -> str:
@@ -207,6 +207,7 @@ def analysis_agent_node(state: AgentState) -> AgentState:
     crm_context = _extract_crm_context(state)
     llm = get_llm()
 
+
     messages = [
         SystemMessage(content=ANALYSIS_SYSTEM_PROMPT),
         HumanMessage(content=ANALYSIS_USER_PROMPT.format(
@@ -220,7 +221,9 @@ def analysis_agent_node(state: AgentState) -> AgentState:
 
     analysis_output: dict = {}
     try:
+        logger.info("Calling analysis LLM...")
         response = llm.invoke(messages)
+        logger.info("Analysis LLM response received")
         raw_text = response.content.strip()
 
         # Strip markdown fences if the model wraps in ```json
@@ -228,6 +231,10 @@ def analysis_agent_node(state: AgentState) -> AgentState:
         raw_text = re.sub(r"\s*```$", "", raw_text)
 
         analysis_output = json.loads(raw_text)
+        logger.info(
+    f"Analysis output type={type(analysis_output)} "
+    f"keys={list(analysis_output.keys())}"
+)
         logger.info(f"[AnalysisAgent] Structured output parsed successfully")
     except json.JSONDecodeError as exc:
         warnings.append(f"JSON parse error in analysis output: {exc}")
